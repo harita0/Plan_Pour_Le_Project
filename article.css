@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Roboto:wght@300;400;500&family=Parisienne&family=BJCree:wght@400;500;600;700&display=swap');
+:root{
+    --BJCree: 'BJCree', serif;
+    --Parisienne: 'Parisienne', cursive;
+    --CormorantGaramond: 'Cormorant Garamond', serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--CormorantGaramond);
+}
+body{
+    line-height: 1.4;
+    color: var(--dark);
+}
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+/* Header Styling */
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+/* Navbar Styling */
+.navbar{
+    background: rgb(234, 221, 202);
+    padding: 1.7rem;
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.navbar-brand{
+    color: 	#36211a;
+    font-size: 2.2rem;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-family: var(--Parisienne);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.navbar-nav{
+    padding: 0.8rem 0 0.2rem 0;
+    margin-left: 2rem;
+    text-align: center;
+}
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: var(--BJCree);
+    font-style: normal;
+    margin-left: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #36211a;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.1rem;
+    letter-spacing: 3px;
+    transition: opacity 0.5s ease;
+}
+.navbar-nav a:hover{
+    opacity: 0.7;
+}
+
+/* General Blog Styling */
+.blog{
+    padding: 6rem 0;
+}
+
+.blog-content{
+    margin: 2rem 0;
+}
+
+.title{
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3rem auto;
+    padding: 0;
+}
+
+.title h2{
+    font-family: var(--CormorantGaramond);
+    font-size: 3rem;
+    font-weight: 600;
+    color: #36211a;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.title p{
+    font-family: var(--CormorantGaramond);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #5b4c43;
+    text-transform: none;
+    letter-spacing: 0.3px;
+}
+
+.blog-button{
+    text-align: center;
+}
+
+.blog-button button{
+    background: #36211a;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2.4rem;
+    font-size: 1rem;
+    font-family: var(--CormorantGaramond);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.blog-button button:hover{
+    background: #1f5c46;
+    transform: translateY(-2px);
+}
+
+#articles {
+    background: #cfbeb2;
+}
+
+.blog-item{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.blog-img{
+    position: relative;
+}
+
+.blog-img img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.blog-img span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--exDark);
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.blog-text{
+    margin: 2.2rem 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-text span{
+    font-weight: 300;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+.blog-text h2{
+    font-family: var(--CormorantGaramond);
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+
+.blog-text p{
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    padding-bottom: 1.2rem;
+}
+
+.blog-content{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .blog-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .blog-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Roboto:wght@300;400;500&family=Parisienne&family=BJCree:wght@400;500;600;700&display=swap');
+:root{
+    --BJCree: 'BJCree', serif;
+    --Parisienne: 'Parisienne', cursive;
+    --CormorantGaramond: 'Cormorant Garamond', serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--CormorantGaramond);
+}
+body{
+    line-height: 1.4;
+    color: var(--dark);
+}
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+/* Header Styling */
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+/* Navbar Styling */
+.navbar{
+    background: rgb(234, 221, 202);
+    padding: 1.7rem;
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.navbar-brand{
+    color: 	#36211a;
+    font-size: 2.2rem;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-family: var(--Parisienne);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.navbar-nav{
+    padding: 0.8rem 0 0.2rem 0;
+    margin-left: 2rem;
+    text-align: center;
+}
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: var(--BJCree);
+    font-style: normal;
+    margin-left: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #36211a;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.1rem;
+    letter-spacing: 3px;
+    transition: opacity 0.5s ease;
+}
+.navbar-nav a:hover{
+    opacity: 0.7;
+}
+
+/* page styling */
+.page-content{
+    background: rgb(234, 221, 202);
+    min-height: 100vh;
+    padding: 5rem 1.5rem;
+}
+
+.title{
+    text-align: center;
+    font-family: var(--CormorantGaramond);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #36211a;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.page-content{
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255,255,255,.35);
+    padding: 3rem;
+    border-radius: 6px;
+}
+
+.page-content p{
+    font-family: var(--Quicksand);
+    font-size: 1.15rem;
+    color: #5b4c43;
+    text-align: center;
+}
+
+
+
+/* Media Queries */
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .blog-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .blog-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
